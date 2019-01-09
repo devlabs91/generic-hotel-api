@@ -1,0 +1,205 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "AvailStatusMessages"
+  ],
+  "properties": {
+    "AvailStatusMessages": {
+      "$id": "#/properties/AvailStatusMessages",
+      "type": "array",
+      "title": "The Availstatusmessages Schema",
+      "items": {
+        "$id": "#/properties/AvailStatusMessages/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "StatusApplicationControl"
+        ],
+        "properties": {
+          "StatusApplicationControl": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/StatusApplicationControl",
+            "type": "object",
+            "title": "The Statusapplicationcontrol Schema",
+            "required": [
+              "InvTypeCode",
+              "RatePlanCode",
+              "Start",
+              "End"
+            ],
+            "properties": {
+              "InvTypeCode": {
+                "$id": "#/properties/AvailStatusMessages/items/properties/StatusApplicationControl/properties/InvTypeCode",
+                "type": "string",
+                "title": "The Invtypecode Schema",
+                "default": "",
+                "examples": [
+                  "ABC1234"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "RatePlanCode": {
+                "$id": "#/properties/AvailStatusMessages/items/properties/StatusApplicationControl/properties/RatePlanCode",
+                "type": "string",
+                "title": "The Rateplancode Schema",
+                "default": "",
+                "examples": [
+                  "DEF5678"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "Start": {
+                "$id": "#/properties/AvailStatusMessages/items/properties/StatusApplicationControl/properties/Start",
+                "type": "string",
+                "title": "The Start Schema",
+                "default": "",
+                "examples": [
+                  "2019-01-01"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "End": {
+                "$id": "#/properties/AvailStatusMessages/items/properties/StatusApplicationControl/properties/End",
+                "type": "string",
+                "title": "The End Schema",
+                "default": "",
+                "examples": [
+                  "2019-01-05"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "BookingLimit": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/BookingLimit",
+            "type": "integer",
+            "title": "The Bookinglimit Schema",
+            "default": 0,
+            "examples": [
+              10
+            ]
+          },
+          "RestrictionStatus": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/RestrictionStatus",
+            "type": "array",
+            "title": "The Restrictionstatus Schema",
+            "items": {
+              "$id": "#/properties/AvailStatusMessages/items/properties/RestrictionStatus/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "Restriction",
+                "Status"
+              ],
+              "properties": {
+                "Restriction": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/RestrictionStatus/items/properties/Restriction",
+                  "type": "string",
+                  "title": "The Restriction Schema",
+                  "default": "",
+                  "examples": [
+                    "Master"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Status": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/RestrictionStatus/items/properties/Status",
+                  "type": "string",
+                  "title": "The Status Schema",
+                  "default": "",
+                  "examples": [
+                    "Open"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "LengthsOfStay": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay",
+            "type": "array",
+            "title": "The Lengthsofstay Schema",
+            "items": {
+              "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "MinMaxMessageType",
+                "Time",
+                "ArrivalDateBased"
+              ],
+              "properties": {
+                "MinMaxMessageType": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay/items/properties/MinMaxMessageType",
+                  "type": "string",
+                  "title": "The Minmaxmessagetype Schema",
+                  "default": "",
+                  "examples": [
+                    "MinLOS"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Time": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay/items/properties/Time",
+                  "type": "integer",
+                  "title": "The Time Schema",
+                  "default": 0,
+                  "examples": [
+                    3
+                  ]
+                },
+                "ArrivalDateBased": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay/items/properties/ArrivalDateBased",
+                  "type": "boolean",
+                  "title": "The Arrivaldatebased Schema",
+                  "default": false,
+                  "examples": [
+                    false
+                  ]
+                }
+              }
+            }
+          },
+          "AdvancedBookingOffset": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/AdvancedBookingOffset",
+            "type": "array",
+            "title": "The Advancedbookingoffset Schema",
+            "items": {
+              "$id": "#/properties/AvailStatusMessages/items/properties/AdvancedBookingOffset/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "Type",
+                "Value"
+              ],
+              "properties": {
+                "Type": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/AdvancedBookingOffset/items/properties/Type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "MinAdvancedBookingOffset"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Value": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/AdvancedBookingOffset/items/properties/Value",
+                  "type": "integer",
+                  "title": "The Value Schema",
+                  "default": 0,
+                  "examples": [
+                    5
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
