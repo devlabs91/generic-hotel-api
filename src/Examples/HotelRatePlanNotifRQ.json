@@ -1,0 +1,51 @@
+{
+  "RateAmountMessages": [
+    {
+      "StatusApplicationControl": {
+        "InvTypeCode": "STD",
+        "RatePlanCode": "RC1",
+        "Start": "2019-01-02",
+        "End": "2019-12-31",
+        "CurrencyCode": "EUR"
+      },
+      "Rates": [
+        {
+          "BaseByGuestAmts": [
+            {
+              "AgeQualifyingCode": 10,
+              "NumberOfGuests": 1,
+              "AmountAfterTax": "13.0000",
+              "CurrencyCode": "EUR"
+            },
+            {
+              "AgeQualifyingCode": 10,
+              "NumberOfGuests": 2,
+              "AmountAfterTax": "26.0000",
+              "CurrencyCode": "EUR"
+            },
+            {
+              "AgeQualifyingCode": 10,
+              "NumberOfGuests": 3,
+              "AmountAfterTax": "29.0000",
+              "CurrencyCode": "EUR"
+            }
+          ],
+          "AdditionalGuestAmounts": [
+            {
+              "MaxAdditionalGuests": 1,
+              "AgeQualifyingCode": 10,
+              "Amount": "12.0000",
+              "CurrencyCode": "EUR"
+            },
+            {
+              "MaxAdditionalGuests": 1,
+              "AgeQualifyingCode": 8,
+              "Amount": "6.0000",
+              "CurrencyCode": "EUR"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

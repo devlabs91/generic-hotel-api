@@ -1,0 +1,220 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "RateAmountMessages"
+  ],
+  "properties": {
+    "RateAmountMessages": {
+      "$id": "#/properties/RateAmountMessages",
+      "type": "array",
+      "title": "The Rateamountmessages Schema",
+      "items": {
+        "$id": "#/properties/RateAmountMessages/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "StatusApplicationControl",
+          "Rates"
+        ],
+        "properties": {
+          "StatusApplicationControl": {
+            "$id": "#/properties/RateAmountMessages/items/properties/StatusApplicationControl",
+            "type": "object",
+            "title": "The Statusapplicationcontrol Schema",
+            "required": [
+              "InvTypeCode",
+              "RatePlanCode",
+              "Start",
+              "End",
+              "CurrencyCode"
+            ],
+            "properties": {
+              "InvTypeCode": {
+                "$id": "#/properties/RateAmountMessages/items/properties/StatusApplicationControl/properties/InvTypeCode",
+                "type": "string",
+                "title": "The Invtypecode Schema",
+                "default": "",
+                "examples": [
+                  "STD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "RatePlanCode": {
+                "$id": "#/properties/RateAmountMessages/items/properties/StatusApplicationControl/properties/RatePlanCode",
+                "type": "string",
+                "title": "The Rateplancode Schema",
+                "default": "",
+                "examples": [
+                  "RC1"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "Start": {
+                "$id": "#/properties/RateAmountMessages/items/properties/StatusApplicationControl/properties/Start",
+                "type": "string",
+                "title": "The Start Schema",
+                "default": "",
+                "examples": [
+                  "2019-01-02"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "End": {
+                "$id": "#/properties/RateAmountMessages/items/properties/StatusApplicationControl/properties/End",
+                "type": "string",
+                "title": "The End Schema",
+                "default": "",
+                "examples": [
+                  "2019-12-31"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "CurrencyCode": {
+                "$id": "#/properties/RateAmountMessages/items/properties/StatusApplicationControl/properties/CurrencyCode",
+                "type": "string",
+                "title": "The Currencycode Schema",
+                "default": "",
+                "examples": [
+                  "EUR"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "Rates": {
+            "$id": "#/properties/RateAmountMessages/items/properties/Rates",
+            "type": "array",
+            "title": "The Rates Schema",
+            "items": {
+              "$id": "#/properties/RateAmountMessages/items/properties/Rates/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "BaseByGuestAmts",
+                "AdditionalGuestAmounts"
+              ],
+              "properties": {
+                "BaseByGuestAmts": {
+                  "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/BaseByGuestAmts",
+                  "type": "array",
+                  "title": "The Basebyguestamts Schema",
+                  "items": {
+                    "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "AgeQualifyingCode",
+                      "NumberOfGuests",
+                      "AmountAfterTax",
+                      "CurrencyCode"
+                    ],
+                    "properties": {
+                      "AgeQualifyingCode": {
+                        "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items/properties/AgeQualifyingCode",
+                        "type": "integer",
+                        "title": "The Agequalifyingcode Schema",
+                        "default": 0,
+                        "examples": [
+                          10
+                        ]
+                      },
+                      "NumberOfGuests": {
+                        "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items/properties/NumberOfGuests",
+                        "type": "integer",
+                        "title": "The Numberofguests Schema",
+                        "default": 0,
+                        "examples": [
+                          1
+                        ]
+                      },
+                      "AmountAfterTax": {
+                        "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items/properties/AmountAfterTax",
+                        "type": "string",
+                        "title": "The Amountaftertax Schema",
+                        "default": "",
+                        "examples": [
+                          "13.0000"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "CurrencyCode": {
+                        "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items/properties/CurrencyCode",
+                        "type": "string",
+                        "title": "The Currencycode Schema",
+                        "default": "",
+                        "examples": [
+                          "EUR"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  }
+                },
+                "AdditionalGuestAmounts": {
+                  "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts",
+                  "type": "array",
+                  "title": "The Additionalguestamounts Schema",
+                  "items": {
+                    "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "MaxAdditionalGuests",
+                      "AgeQualifyingCode",
+                      "Amount",
+                      "CurrencyCode"
+                    ],
+                    "properties": {
+                      "MaxAdditionalGuests": {
+                        "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items/properties/MaxAdditionalGuests",
+                        "type": "integer",
+                        "title": "The Maxadditionalguests Schema",
+                        "default": 0,
+                        "examples": [
+                          1
+                        ]
+                      },
+                      "AgeQualifyingCode": {
+                        "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items/properties/AgeQualifyingCode",
+                        "type": "integer",
+                        "title": "The Agequalifyingcode Schema",
+                        "default": 0,
+                        "examples": [
+                          10
+                        ]
+                      },
+                      "Amount": {
+                        "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items/properties/Amount",
+                        "type": "string",
+                        "title": "The Amount Schema",
+                        "default": "",
+                        "examples": [
+                          "12.0000"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "CurrencyCode": {
+                        "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items/properties/CurrencyCode",
+                        "type": "string",
+                        "title": "The Currencycode Schema",
+                        "default": "",
+                        "examples": [
+                          "EUR"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
