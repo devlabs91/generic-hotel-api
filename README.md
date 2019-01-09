@@ -15,6 +15,14 @@ This command requires you to have Composer installed globally, as explained
 in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
 of the Composer documentation.
 
+Installation
+============
+
+Add to app/AppKernel.php :
+
+    new Devlabs91\GenericHotelApi\GenericHotelApiBundle(),
+
+
 Documentation
 ============
 
