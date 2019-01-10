@@ -1,0 +1,40 @@
+{
+  "RatePlans": [
+    {
+      "RatePlanCode": "DEF5678",
+      "RatePlanName": "SRATE3",
+      "RoomTypes": [
+        {
+          "RoomTypeCode": "SROOM2",
+          "RoomTypeName": "Standard",
+          "Displayname": "SRATE3 - Standard",
+          "LinksRate": 1,
+          "MinOccupancy": 1,
+          "MaxOccupancy": 3,
+          "MaxExtraBed": 0,
+          "MaxExtraChild": 0,
+          "Minlos": 0,
+          "Maxlos": 0,
+          "Minrate": "0.0000",
+          "Maxrate": "0.0000",
+          "Remark": {}
+        },
+        {
+          "RoomTypeCode": "SROOM3",
+          "RoomTypeName": "Standard 2",
+          "Displayname": "SRATE3 - Standard 2",
+          "LinksRate": 0,
+          "MinOccupancy": null,
+          "MaxOccupancy": null,
+          "MaxExtraBed": null,
+          "MaxExtraChild": null,
+          "Minlos": null,
+          "Maxlos": null,
+          "Minrate": null,
+          "Maxrate": null,
+          "Remark": {}
+        }
+      ]
+    }
+  ]
+}

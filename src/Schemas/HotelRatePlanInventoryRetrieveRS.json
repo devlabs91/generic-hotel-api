@@ -1,0 +1,185 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "RatePlans"
+  ],
+  "properties": {
+    "RatePlans": {
+      "$id": "#/properties/RatePlans",
+      "type": "array",
+      "title": "The Rateplans Schema",
+      "items": {
+        "$id": "#/properties/RatePlans/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "RatePlanCode",
+          "RatePlanName",
+          "RoomTypes"
+        ],
+        "properties": {
+          "RatePlanCode": {
+            "$id": "#/properties/RatePlans/items/properties/RatePlanCode",
+            "type": "string",
+            "title": "The Rateplancode Schema",
+            "default": "",
+            "examples": [
+              "DEF5678"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "RatePlanName": {
+            "$id": "#/properties/RatePlans/items/properties/RatePlanName",
+            "type": "string",
+            "title": "The Rateplanname Schema",
+            "default": "",
+            "examples": [
+              "SRATE3"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "RoomTypes": {
+            "$id": "#/properties/RatePlans/items/properties/RoomTypes",
+            "type": "array",
+            "title": "The Roomtypes Schema",
+            "items": {
+              "$id": "#/properties/RatePlans/items/properties/RoomTypes/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "RoomTypeCode",
+                "RoomTypeName",
+                "Displayname",
+                "LinksRate"
+              ],
+              "properties": {
+                "RoomTypeCode": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/RoomTypeCode",
+                  "type": "string",
+                  "title": "The Roomtypecode Schema",
+                  "default": "",
+                  "examples": [
+                    "SROOM2"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "RoomTypeName": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/RoomTypeName",
+                  "type": "string",
+                  "title": "The Roomtypename Schema",
+                  "default": "",
+                  "examples": [
+                    "Standard"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Displayname": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/Displayname",
+                  "type": "string",
+                  "title": "The Displayname Schema",
+                  "default": "",
+                  "examples": [
+                    "SRATE3 - Standard"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "LinksRate": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/LinksRate",
+                  "type": "integer",
+                  "title": "The Linksrate Schema",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "MinOccupancy": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/MinOccupancy",
+                  "type": "integer",
+                  "title": "The Minoccupancy Schema",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "MaxOccupancy": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/MaxOccupancy",
+                  "type": "integer",
+                  "title": "The Maxoccupancy Schema",
+                  "default": 0,
+                  "examples": [
+                    3
+                  ]
+                },
+                "MaxExtraBed": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/MaxExtraBed",
+                  "type": "integer",
+                  "title": "The Maxextrabed Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "MaxExtraChild": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/MaxExtraChild",
+                  "type": "integer",
+                  "title": "The Maxextrachild Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "Minlos": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/Minlos",
+                  "type": "integer",
+                  "title": "The Minlos Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "Maxlos": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/Maxlos",
+                  "type": "integer",
+                  "title": "The Maxlos Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "Minrate": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/Minrate",
+                  "type": "string",
+                  "title": "The Minrate Schema",
+                  "default": "",
+                  "examples": [
+                    "0.0000"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Maxrate": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/Maxrate",
+                  "type": "string",
+                  "title": "The Maxrate Schema",
+                  "default": "",
+                  "examples": [
+                    "0.0000"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Remark": {
+                  "$id": "#/properties/RatePlans/items/properties/RoomTypes/items/properties/Remark",
+                  "type": "object",
+                  "title": "The Remark Schema"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
