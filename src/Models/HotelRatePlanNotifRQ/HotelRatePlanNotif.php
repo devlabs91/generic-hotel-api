@@ -80,6 +80,32 @@ class HotelRatePlanNotif extends ClassStructure
     }
     /** @codeCoverageIgnoreEnd */
 
+    /**
+     * @param string $key
+     * @return RateAmountMessagesItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getRateAmountMessagesByKey($key)
+    {
+        if(is_array($this->rateAmountMessages) && key_exists($key, $this->rateAmountMessages) ) { return $this->rateAmountMessages[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param RateAmountMessagesItems $RateAmountMessagesItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setRateAmountMessagesByKey($key, RateAmountMessagesItems $RateAmountMessagesItems)
+    {
+        if(!is_array($this->rateAmountMessages)) { $this->rateAmountMessages = []; }
+        $this->rateAmountMessages[$key] = $RateAmountMessagesItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
     public function &toArray()
     {
         $test = json_decode( json_encode( self::export( $this ) ), true);

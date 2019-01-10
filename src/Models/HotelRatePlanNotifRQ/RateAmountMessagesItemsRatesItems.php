@@ -90,6 +90,32 @@ class RateAmountMessagesItemsRatesItems extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
+     * @param string $key
+     * @return RateAmountMessagesItemsRatesItemsBaseByGuestAmtsItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getBaseByGuestAmtsByKey($key)
+    {
+        if(is_array($this->baseByGuestAmts) && key_exists($key, $this->baseByGuestAmts) ) { return $this->baseByGuestAmts[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param RateAmountMessagesItemsRatesItemsBaseByGuestAmtsItems $RateAmountMessagesItemsRatesItemsBaseByGuestAmtsItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setBaseByGuestAmtsByKey($key, RateAmountMessagesItemsRatesItemsBaseByGuestAmtsItems $RateAmountMessagesItemsRatesItemsBaseByGuestAmtsItems)
+    {
+        if(!is_array($this->baseByGuestAmts)) { $this->baseByGuestAmts = []; }
+        $this->baseByGuestAmts[$key] = $RateAmountMessagesItemsRatesItemsBaseByGuestAmtsItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
      * @return RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems[]|array
      * @codeCoverageIgnoreStart
      */
@@ -120,6 +146,32 @@ class RateAmountMessagesItemsRatesItems extends ClassStructure
     {
         if(!is_array($this->additionalGuestAmounts)) { $this->additionalGuestAmounts = []; }
         $this->additionalGuestAmounts[] = $RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @return RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getAdditionalGuestAmountsByKey($key)
+    {
+        if(is_array($this->additionalGuestAmounts) && key_exists($key, $this->additionalGuestAmounts) ) { return $this->additionalGuestAmounts[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems $RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setAdditionalGuestAmountsByKey($key, RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems $RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems)
+    {
+        if(!is_array($this->additionalGuestAmounts)) { $this->additionalGuestAmounts = []; }
+        $this->additionalGuestAmounts[$key] = $RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems;
         return $this;
     }
     /** @codeCoverageIgnoreEnd */

@@ -158,6 +158,32 @@ class AvailStatusMessagesItems extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
+     * @param string $key
+     * @return AvailStatusMessagesItemsRestrictionStatusItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getRestrictionStatusByKey($key)
+    {
+        if(is_array($this->restrictionStatus) && key_exists($key, $this->restrictionStatus) ) { return $this->restrictionStatus[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param AvailStatusMessagesItemsRestrictionStatusItems $AvailStatusMessagesItemsRestrictionStatusItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setRestrictionStatusByKey($key, AvailStatusMessagesItemsRestrictionStatusItems $AvailStatusMessagesItemsRestrictionStatusItems)
+    {
+        if(!is_array($this->restrictionStatus)) { $this->restrictionStatus = []; }
+        $this->restrictionStatus[$key] = $AvailStatusMessagesItemsRestrictionStatusItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
      * @return AvailStatusMessagesItemsLengthsOfStayItems[]|array
      * @codeCoverageIgnoreStart
      */
@@ -193,6 +219,32 @@ class AvailStatusMessagesItems extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
+     * @param string $key
+     * @return AvailStatusMessagesItemsLengthsOfStayItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getLengthsOfStayByKey($key)
+    {
+        if(is_array($this->lengthsOfStay) && key_exists($key, $this->lengthsOfStay) ) { return $this->lengthsOfStay[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param AvailStatusMessagesItemsLengthsOfStayItems $AvailStatusMessagesItemsLengthsOfStayItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setLengthsOfStayByKey($key, AvailStatusMessagesItemsLengthsOfStayItems $AvailStatusMessagesItemsLengthsOfStayItems)
+    {
+        if(!is_array($this->lengthsOfStay)) { $this->lengthsOfStay = []; }
+        $this->lengthsOfStay[$key] = $AvailStatusMessagesItemsLengthsOfStayItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
      * @return AvailStatusMessagesItemsAdvancedBookingOffsetItems[]|array
      * @codeCoverageIgnoreStart
      */
@@ -223,6 +275,32 @@ class AvailStatusMessagesItems extends ClassStructure
     {
         if(!is_array($this->advancedBookingOffset)) { $this->advancedBookingOffset = []; }
         $this->advancedBookingOffset[] = $AvailStatusMessagesItemsAdvancedBookingOffsetItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @return AvailStatusMessagesItemsAdvancedBookingOffsetItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getAdvancedBookingOffsetByKey($key)
+    {
+        if(is_array($this->advancedBookingOffset) && key_exists($key, $this->advancedBookingOffset) ) { return $this->advancedBookingOffset[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param AvailStatusMessagesItemsAdvancedBookingOffsetItems $AvailStatusMessagesItemsAdvancedBookingOffsetItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setAdvancedBookingOffsetByKey($key, AvailStatusMessagesItemsAdvancedBookingOffsetItems $AvailStatusMessagesItemsAdvancedBookingOffsetItems)
+    {
+        if(!is_array($this->advancedBookingOffset)) { $this->advancedBookingOffset = []; }
+        $this->advancedBookingOffset[$key] = $AvailStatusMessagesItemsAdvancedBookingOffsetItems;
         return $this;
     }
     /** @codeCoverageIgnoreEnd */

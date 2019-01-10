@@ -109,6 +109,32 @@ class RateAmountMessagesItems extends ClassStructure
     }
     /** @codeCoverageIgnoreEnd */
 
+    /**
+     * @param string $key
+     * @return RateAmountMessagesItemsRatesItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getRatesByKey($key)
+    {
+        if(is_array($this->rates) && key_exists($key, $this->rates) ) { return $this->rates[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param RateAmountMessagesItemsRatesItems $RateAmountMessagesItemsRatesItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setRatesByKey($key, RateAmountMessagesItemsRatesItems $RateAmountMessagesItemsRatesItems)
+    {
+        if(!is_array($this->rates)) { $this->rates = []; }
+        $this->rates[$key] = $RateAmountMessagesItemsRatesItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
     public function &toArray()
     {
         $test = json_decode( json_encode( self::export( $this ) ), true);

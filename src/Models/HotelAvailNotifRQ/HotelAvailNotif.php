@@ -80,6 +80,32 @@ class HotelAvailNotif extends ClassStructure
     }
     /** @codeCoverageIgnoreEnd */
 
+    /**
+     * @param string $key
+     * @return AvailStatusMessagesItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getAvailStatusMessagesByKey($key)
+    {
+        if(is_array($this->availStatusMessages) && key_exists($key, $this->availStatusMessages) ) { return $this->availStatusMessages[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param AvailStatusMessagesItems $AvailStatusMessagesItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setAvailStatusMessagesByKey($key, AvailStatusMessagesItems $AvailStatusMessagesItems)
+    {
+        if(!is_array($this->availStatusMessages)) { $this->availStatusMessages = []; }
+        $this->availStatusMessages[$key] = $AvailStatusMessagesItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
     public function &toArray()
     {
         $test = json_decode( json_encode( self::export( $this ) ), true);
