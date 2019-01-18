@@ -10,6 +10,7 @@ class CodeBuilderService {
             'HotelAvailNotifRQ.json' => [ 'HotelAvailNotifRQ', 'HotelAvailNotif' ],
             'HotelRatePlanNotifRQ.json' => [ 'HotelRatePlanNotifRQ', 'HotelRatePlanNotif' ],
             'HotelRatePlanInventoryRetrieveRS.json' => [ 'HotelRatePlanInventoryRetrieveRS', 'HotelRatePlanInventoryRetrieve' ],
+            'HotelResRetrieveRQ.json' => [ 'HotelResRetrieveRQ', 'HotelResRetrieve' ],
         ];
         
         foreach( $schemas AS $schemaFileName => $params ) {
