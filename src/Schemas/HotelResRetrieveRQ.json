@@ -22,66 +22,61 @@
         "properties": {
           "HotelReadRequest": {
             "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest",
-            "type": "array",
+            "type": "object",
             "title": "The Hotelreadrequest Schema",
-            "items": {
-              "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/items",
-              "type": "object",
-              "title": "The Items Schema",
-              "required": [
-                "SelectionCriteria"
-              ],
-              "properties": {
-                "HotelCode": {
-                  "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/items/properties/HotelCode",
-                  "type": "string",
-                  "title": "The Hotelcode Schema",
-                  "default": "",
-                  "examples": [
-                    "1608"
-                  ],
-                  "pattern": "^(.*)$"
-                },
-                "SelectionCriteria": {
-                  "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/items/properties/SelectionCriteria",
-                  "type": "object",
-                  "title": "The Selectioncriteria Schema",
-                  "required": [
-                    "Start",
-                    "End",
-                    "DateType"
-                  ],
-                  "properties": {
-                    "Start": {
-                      "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/items/properties/SelectionCriteria/properties/Start",
-                      "type": "string",
-                      "title": "The Start Schema",
-                      "default": "",
-                      "examples": [
-                        "2019-01-01"
-                      ],
-                      "pattern": "^(.*)$"
-                    },
-                    "End": {
-                      "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/items/properties/SelectionCriteria/properties/End",
-                      "type": "string",
-                      "title": "The End Schema",
-                      "default": "",
-                      "examples": [
-                        "2019-01-02"
-                      ],
-                      "pattern": "^(.*)$"
-                    },
-                    "DateType": {
-                      "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/items/properties/SelectionCriteria/properties/DateType",
-                      "type": "string",
-                      "title": "The Datetype Schema",
-                      "default": "",
-                      "examples": [
-                        "CreateDate"
-                      ],
-                      "pattern": "^(.*)$"
-                    }
+            "required": [
+              "SelectionCriteria"
+            ],
+            "properties": {
+              "HotelCode": {
+                "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/properties/HotelCode",
+                "type": "string",
+                "title": "The Hotelcode Schema",
+                "default": "",
+                "examples": [
+                  "1608"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "SelectionCriteria": {
+                "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/properties/SelectionCriteria",
+                "type": "object",
+                "title": "The Selectioncriteria Schema",
+                "required": [
+                  "Start",
+                  "End",
+                  "DateType"
+                ],
+                "properties": {
+                  "Start": {
+                    "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/properties/SelectionCriteria/properties/Start",
+                    "type": "string",
+                    "title": "The Start Schema",
+                    "default": "",
+                    "examples": [
+                      "2019-01-01"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "End": {
+                    "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/properties/SelectionCriteria/properties/End",
+                    "type": "string",
+                    "title": "The End Schema",
+                    "default": "",
+                    "examples": [
+                      "2019-01-02"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "DateType": {
+                    "$id": "#/properties/ReadRequests/items/properties/HotelReadRequest/properties/SelectionCriteria/properties/DateType",
+                    "type": "string",
+                    "title": "The Datetype Schema",
+                    "default": "",
+                    "examples": [
+                      "CreateDate"
+                    ],
+                    "pattern": "^(.*)$"
                   }
                 }
               }

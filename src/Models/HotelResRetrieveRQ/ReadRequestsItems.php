@@ -16,13 +16,13 @@ use Swaggest\JsonSchema\Structure\ClassStructure;
  */
 class ReadRequestsItems extends ClassStructure
 {
-    /** @var ReadRequestsItemsHotelReadRequestItems[]|array */
+    /** @var ReadRequestsItemsHotelReadRequest */
     public $hotelReadRequest = NULL;
 
     /**
-     * @param ReadRequestsItemsHotelReadRequestItems[]|array $hotelReadRequest
+     * @param ReadRequestsItemsHotelReadRequest $hotelReadRequest
      */
-    public function __construct($hotelReadRequest = NULL)
+    public function __construct(ReadRequestsItemsHotelReadRequest $hotelReadRequest = NULL)
     {
         $this->hotelReadRequest = $hotelReadRequest;
     }
@@ -33,9 +33,7 @@ class ReadRequestsItems extends ClassStructure
      */
     public static function setUpProperties($properties, Schema $ownerSchema)
     {
-        $properties->hotelReadRequest = Schema::arr();
-        $properties->hotelReadRequest->items = ReadRequestsItemsHotelReadRequestItems::schema();
-        $properties->hotelReadRequest->title = "The Hotelreadrequest Schema";
+        $properties->hotelReadRequest = ReadRequestsItemsHotelReadRequest::schema();
         $ownerSchema->addPropertyMapping('HotelReadRequest', self::names()->hotelReadRequest);
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Items Schema";
@@ -45,7 +43,7 @@ class ReadRequestsItems extends ClassStructure
     }
 
     /**
-     * @return ReadRequestsItemsHotelReadRequestItems[]|array
+     * @return ReadRequestsItemsHotelReadRequest
      * @codeCoverageIgnoreStart
      */
     public function getHotelReadRequest()
@@ -55,52 +53,13 @@ class ReadRequestsItems extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
-     * @param ReadRequestsItemsHotelReadRequestItems[]|array $hotelReadRequest
+     * @param ReadRequestsItemsHotelReadRequest $hotelReadRequest
      * @return $this
      * @codeCoverageIgnoreStart
      */
-    public function setHotelReadRequest($hotelReadRequest = NULL)
+    public function setHotelReadRequest(ReadRequestsItemsHotelReadRequest $hotelReadRequest = NULL)
     {
         $this->hotelReadRequest = $hotelReadRequest;
-        return $this;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param ReadRequestsItemsHotelReadRequestItems $ReadRequestsItemsHotelReadRequestItems
-     * @return $this
-     * @codeCoverageIgnoreStart
-     */
-    public function addHotelReadRequest(ReadRequestsItemsHotelReadRequestItems $ReadRequestsItemsHotelReadRequestItems)
-    {
-        if(!is_array($this->hotelReadRequest)) { $this->hotelReadRequest = []; }
-        $this->hotelReadRequest[] = $ReadRequestsItemsHotelReadRequestItems;
-        return $this;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param string $key
-     * @return ReadRequestsItemsHotelReadRequestItems|null
-     * @codeCoverageIgnoreStart
-     */
-    public function getHotelReadRequestByKey($key)
-    {
-        if(is_array($this->hotelReadRequest) && key_exists($key, $this->hotelReadRequest) ) { return $this->hotelReadRequest[$key]; }
-        return null;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param string $key
-     * @param ReadRequestsItemsHotelReadRequestItems $ReadRequestsItemsHotelReadRequestItems
-     * @return $this
-     * @codeCoverageIgnoreStart
-     */
-    public function setHotelReadRequestByKey($key, ReadRequestsItemsHotelReadRequestItems $ReadRequestsItemsHotelReadRequestItems)
-    {
-        if(!is_array($this->hotelReadRequest)) { $this->hotelReadRequest = []; }
-        $this->hotelReadRequest[$key] = $ReadRequestsItemsHotelReadRequestItems;
         return $this;
     }
     /** @codeCoverageIgnoreEnd */
