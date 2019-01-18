@@ -1,24 +1,12 @@
 {
-  "ReadRequests": [
-    {
-      "HotelReadRequest": {
-        "HotelCode": "1608",
-        "SelectionCriteria": {
-          "Start": "2019-01-01",
-          "End": "2019-01-02",
-          "DateType": "CreateDate"
-        }
-      }
-    },
-    {
-      "HotelReadRequest": {
-        "HotelCode": "1608",
-        "SelectionCriteria": {
-          "Start": "2019-01-01",
-          "End": "2019-01-02",
-          "DateType": "LastUpdateDate"
-        }
+  "ReadRequests": {
+    "HotelReadRequest": {
+      "HotelCode": "1608",
+      "SelectionCriteria": {
+        "Start": "2019-01-01",
+        "End": "2019-01-02",
+        "DateType": "CreateDate"
       }
     }
-  ]
+  }
 }

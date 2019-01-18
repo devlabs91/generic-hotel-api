@@ -14,19 +14,19 @@ use Swaggest\JsonSchema\Structure\ClassStructure;
 /**
  * The Hotelreadrequest Schema
  */
-class ReadRequestsItemsHotelReadRequest extends ClassStructure
+class ReadRequestsHotelReadRequest extends ClassStructure
 {
     /** @var string */
     public $hotelCode = NULL;
 
-    /** @var ReadRequestsItemsHotelReadRequestSelectionCriteria */
+    /** @var ReadRequestsHotelReadRequestSelectionCriteria */
     public $selectionCriteria = NULL;
 
     /**
      * @param string $hotelCode
-     * @param ReadRequestsItemsHotelReadRequestSelectionCriteria $selectionCriteria
+     * @param ReadRequestsHotelReadRequestSelectionCriteria $selectionCriteria
      */
-    public function __construct($hotelCode = NULL, ReadRequestsItemsHotelReadRequestSelectionCriteria $selectionCriteria = NULL)
+    public function __construct($hotelCode = NULL, ReadRequestsHotelReadRequestSelectionCriteria $selectionCriteria = NULL)
     {
         $this->hotelCode = $hotelCode;
         $this->selectionCriteria = $selectionCriteria;
@@ -43,7 +43,7 @@ class ReadRequestsItemsHotelReadRequest extends ClassStructure
         $properties->hotelCode->default = "";
         $properties->hotelCode->pattern = "^(.*)$";
         $ownerSchema->addPropertyMapping('HotelCode', self::names()->hotelCode);
-        $properties->selectionCriteria = ReadRequestsItemsHotelReadRequestSelectionCriteria::schema();
+        $properties->selectionCriteria = ReadRequestsHotelReadRequestSelectionCriteria::schema();
         $ownerSchema->addPropertyMapping('SelectionCriteria', self::names()->selectionCriteria);
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Hotelreadrequest Schema";
@@ -75,7 +75,7 @@ class ReadRequestsItemsHotelReadRequest extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
-     * @return ReadRequestsItemsHotelReadRequestSelectionCriteria
+     * @return ReadRequestsHotelReadRequestSelectionCriteria
      * @codeCoverageIgnoreStart
      */
     public function getSelectionCriteria()
@@ -85,11 +85,11 @@ class ReadRequestsItemsHotelReadRequest extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
-     * @param ReadRequestsItemsHotelReadRequestSelectionCriteria $selectionCriteria
+     * @param ReadRequestsHotelReadRequestSelectionCriteria $selectionCriteria
      * @return $this
      * @codeCoverageIgnoreStart
      */
-    public function setSelectionCriteria(ReadRequestsItemsHotelReadRequestSelectionCriteria $selectionCriteria = NULL)
+    public function setSelectionCriteria(ReadRequestsHotelReadRequestSelectionCriteria $selectionCriteria = NULL)
     {
         $this->selectionCriteria = $selectionCriteria;
         return $this;

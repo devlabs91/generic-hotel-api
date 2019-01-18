@@ -12,17 +12,17 @@ use Swaggest\JsonSchema\Structure\ClassStructure;
 
 
 /**
- * The Items Schema
+ * The Readrequests Schema
  */
-class ReadRequestsItems extends ClassStructure
+class ReadRequests extends ClassStructure
 {
-    /** @var ReadRequestsItemsHotelReadRequest */
+    /** @var ReadRequestsHotelReadRequest */
     public $hotelReadRequest = NULL;
 
     /**
-     * @param ReadRequestsItemsHotelReadRequest $hotelReadRequest
+     * @param ReadRequestsHotelReadRequest $hotelReadRequest
      */
-    public function __construct(ReadRequestsItemsHotelReadRequest $hotelReadRequest = NULL)
+    public function __construct(ReadRequestsHotelReadRequest $hotelReadRequest = NULL)
     {
         $this->hotelReadRequest = $hotelReadRequest;
     }
@@ -33,17 +33,17 @@ class ReadRequestsItems extends ClassStructure
      */
     public static function setUpProperties($properties, Schema $ownerSchema)
     {
-        $properties->hotelReadRequest = ReadRequestsItemsHotelReadRequest::schema();
+        $properties->hotelReadRequest = ReadRequestsHotelReadRequest::schema();
         $ownerSchema->addPropertyMapping('HotelReadRequest', self::names()->hotelReadRequest);
         $ownerSchema->type = 'object';
-        $ownerSchema->title = "The Items Schema";
+        $ownerSchema->title = "The Readrequests Schema";
         $ownerSchema->required = array(
             0 => 'HotelReadRequest',
         );
     }
 
     /**
-     * @return ReadRequestsItemsHotelReadRequest
+     * @return ReadRequestsHotelReadRequest
      * @codeCoverageIgnoreStart
      */
     public function getHotelReadRequest()
@@ -53,11 +53,11 @@ class ReadRequestsItems extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
-     * @param ReadRequestsItemsHotelReadRequest $hotelReadRequest
+     * @param ReadRequestsHotelReadRequest $hotelReadRequest
      * @return $this
      * @codeCoverageIgnoreStart
      */
-    public function setHotelReadRequest(ReadRequestsItemsHotelReadRequest $hotelReadRequest = NULL)
+    public function setHotelReadRequest(ReadRequestsHotelReadRequest $hotelReadRequest = NULL)
     {
         $this->hotelReadRequest = $hotelReadRequest;
         return $this;

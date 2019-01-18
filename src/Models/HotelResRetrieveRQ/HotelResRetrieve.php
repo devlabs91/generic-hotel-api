@@ -16,13 +16,13 @@ use Swaggest\JsonSchema\Structure\ClassStructure;
  */
 class HotelResRetrieve extends ClassStructure
 {
-    /** @var ReadRequestsItems[]|array */
+    /** @var ReadRequests */
     public $readRequests = NULL;
 
     /**
-     * @param ReadRequestsItems[]|array $readRequests
+     * @param ReadRequests $readRequests
      */
-    public function __construct($readRequests = NULL)
+    public function __construct(ReadRequests $readRequests = NULL)
     {
         $this->readRequests = $readRequests;
     }
@@ -33,9 +33,7 @@ class HotelResRetrieve extends ClassStructure
      */
     public static function setUpProperties($properties, Schema $ownerSchema)
     {
-        $properties->readRequests = Schema::arr();
-        $properties->readRequests->items = ReadRequestsItems::schema();
-        $properties->readRequests->title = "The Readrequests Schema";
+        $properties->readRequests = ReadRequests::schema();
         $ownerSchema->addPropertyMapping('ReadRequests', self::names()->readRequests);
         $ownerSchema->type = 'object';
         $ownerSchema->schema = "http://json-schema.org/draft-07/schema#";
@@ -46,7 +44,7 @@ class HotelResRetrieve extends ClassStructure
     }
 
     /**
-     * @return ReadRequestsItems[]|array
+     * @return ReadRequests
      * @codeCoverageIgnoreStart
      */
     public function getReadRequests()
@@ -56,52 +54,13 @@ class HotelResRetrieve extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
-     * @param ReadRequestsItems[]|array $readRequests
+     * @param ReadRequests $readRequests
      * @return $this
      * @codeCoverageIgnoreStart
      */
-    public function setReadRequests($readRequests = NULL)
+    public function setReadRequests(ReadRequests $readRequests = NULL)
     {
         $this->readRequests = $readRequests;
-        return $this;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param ReadRequestsItems $ReadRequestsItems
-     * @return $this
-     * @codeCoverageIgnoreStart
-     */
-    public function addReadRequests(ReadRequestsItems $ReadRequestsItems)
-    {
-        if(!is_array($this->readRequests)) { $this->readRequests = []; }
-        $this->readRequests[] = $ReadRequestsItems;
-        return $this;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param string $key
-     * @return ReadRequestsItems|null
-     * @codeCoverageIgnoreStart
-     */
-    public function getReadRequestsByKey($key)
-    {
-        if(is_array($this->readRequests) && key_exists($key, $this->readRequests) ) { return $this->readRequests[$key]; }
-        return null;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param string $key
-     * @param ReadRequestsItems $ReadRequestsItems
-     * @return $this
-     * @codeCoverageIgnoreStart
-     */
-    public function setReadRequestsByKey($key, ReadRequestsItems $ReadRequestsItems)
-    {
-        if(!is_array($this->readRequests)) { $this->readRequests = []; }
-        $this->readRequests[$key] = $ReadRequestsItems;
         return $this;
     }
     /** @codeCoverageIgnoreEnd */

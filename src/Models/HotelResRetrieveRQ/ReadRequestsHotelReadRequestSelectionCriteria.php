@@ -14,7 +14,7 @@ use Swaggest\JsonSchema\Structure\ClassStructure;
 /**
  * The Selectioncriteria Schema
  */
-class ReadRequestsItemsHotelReadRequestSelectionCriteria extends ClassStructure
+class ReadRequestsHotelReadRequestSelectionCriteria extends ClassStructure
 {
     /** @var string */
     public $start = NULL;
