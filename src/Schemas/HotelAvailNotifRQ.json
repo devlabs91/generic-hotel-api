@@ -70,6 +70,16 @@
                   "2019-01-05"
                 ],
                 "pattern": "^(.*)$"
+              },
+              "CurrencyCode": {
+                "$id": "#/properties/AvailStatusMessages/items/properties/StatusApplicationControl/properties/CurrencyCode",
+                "type": "string",
+                "title": "The Currencycode Schema",
+                "default": "",
+                "examples": [
+                  "EUR"
+                ],
+                "pattern": "^(.*)$"
               }
             }
           },
@@ -194,6 +204,134 @@
                   "examples": [
                     5
                   ]
+                }
+              }
+            }
+          },
+          "Rates": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/Rates",
+            "type": "array",
+            "title": "The Rates Schema",
+            "items": {
+              "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "BaseByGuestAmts",
+                "AdditionalGuestAmounts"
+              ],
+              "properties": {
+                "BaseByGuestAmts": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/BaseByGuestAmts",
+                  "type": "array",
+                  "title": "The Basebyguestamts Schema",
+                  "items": {
+                    "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "AgeQualifyingCode",
+                      "NumberOfGuests",
+                      "AmountAfterTax",
+                      "CurrencyCode"
+                    ],
+                    "properties": {
+                      "AgeQualifyingCode": {
+                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items/properties/AgeQualifyingCode",
+                        "type": "integer",
+                        "title": "The Agequalifyingcode Schema",
+                        "default": 0,
+                        "examples": [
+                          10
+                        ]
+                      },
+                      "NumberOfGuests": {
+                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items/properties/NumberOfGuests",
+                        "type": "integer",
+                        "title": "The Numberofguests Schema",
+                        "default": 0,
+                        "examples": [
+                          1
+                        ]
+                      },
+                      "AmountAfterTax": {
+                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items/properties/AmountAfterTax",
+                        "type": "string",
+                        "title": "The Amountaftertax Schema",
+                        "default": "",
+                        "examples": [
+                          "13.0000"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "CurrencyCode": {
+                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/BaseByGuestAmts/items/properties/CurrencyCode",
+                        "type": "string",
+                        "title": "The Currencycode Schema",
+                        "default": "",
+                        "examples": [
+                          "EUR"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  }
+                },
+                "AdditionalGuestAmounts": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts",
+                  "type": "array",
+                  "title": "The Additionalguestamounts Schema",
+                  "items": {
+                    "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "MaxAdditionalGuests",
+                      "AgeQualifyingCode",
+                      "Amount",
+                      "CurrencyCode"
+                    ],
+                    "properties": {
+                      "MaxAdditionalGuests": {
+                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items/properties/MaxAdditionalGuests",
+                        "type": "integer",
+                        "title": "The Maxadditionalguests Schema",
+                        "default": 0,
+                        "examples": [
+                          1
+                        ]
+                      },
+                      "AgeQualifyingCode": {
+                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items/properties/AgeQualifyingCode",
+                        "type": "integer",
+                        "title": "The Agequalifyingcode Schema",
+                        "default": 0,
+                        "examples": [
+                          10
+                        ]
+                      },
+                      "Amount": {
+                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items/properties/Amount",
+                        "type": "string",
+                        "title": "The Amount Schema",
+                        "default": "",
+                        "examples": [
+                          "12.0000"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "CurrencyCode": {
+                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/AdditionalGuestAmounts/items/properties/CurrencyCode",
+                        "type": "string",
+                        "title": "The Currencycode Schema",
+                        "default": "",
+                        "examples": [
+                          "EUR"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  }
                 }
               }
             }

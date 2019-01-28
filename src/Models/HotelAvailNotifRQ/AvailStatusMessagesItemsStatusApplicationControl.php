@@ -28,18 +28,23 @@ class AvailStatusMessagesItemsStatusApplicationControl extends ClassStructure
     /** @var string */
     public $end = NULL;
 
+    /** @var string */
+    public $currencyCode = NULL;
+
     /**
      * @param string $invTypeCode
      * @param string $ratePlanCode
      * @param string $start
      * @param string $end
+     * @param string $currencyCode
      */
-    public function __construct($invTypeCode = NULL, $ratePlanCode = NULL, $start = NULL, $end = NULL)
+    public function __construct($invTypeCode = NULL, $ratePlanCode = NULL, $start = NULL, $end = NULL, $currencyCode = NULL)
     {
         $this->invTypeCode = $invTypeCode;
         $this->ratePlanCode = $ratePlanCode;
         $this->start = $start;
         $this->end = $end;
+        $this->currencyCode = $currencyCode;
     }
 
     /**
@@ -68,6 +73,11 @@ class AvailStatusMessagesItemsStatusApplicationControl extends ClassStructure
         $properties->end->default = "";
         $properties->end->pattern = "^(.*)$";
         $ownerSchema->addPropertyMapping('End', self::names()->end);
+        $properties->currencyCode = Schema::string();
+        $properties->currencyCode->title = "The Currencycode Schema";
+        $properties->currencyCode->default = "";
+        $properties->currencyCode->pattern = "^(.*)$";
+        $ownerSchema->addPropertyMapping('CurrencyCode', self::names()->currencyCode);
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Statusapplicationcontrol Schema";
         $ownerSchema->required = array(
@@ -162,6 +172,28 @@ class AvailStatusMessagesItemsStatusApplicationControl extends ClassStructure
     public function setEnd($end = NULL)
     {
         $this->end = $end;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @return string
+     * @codeCoverageIgnoreStart
+     */
+    public function getCurrencyCode()
+    {
+        return $this->currencyCode;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $currencyCode
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setCurrencyCode($currencyCode = NULL)
+    {
+        $this->currencyCode = $currencyCode;
         return $this;
     }
     /** @codeCoverageIgnoreEnd */

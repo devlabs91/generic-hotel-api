@@ -31,20 +31,25 @@ class AvailStatusMessagesItems extends ClassStructure
     /** @var AvailStatusMessagesItemsAdvancedBookingOffsetItems[]|array */
     public $advancedBookingOffset = NULL;
 
+    /** @var AvailStatusMessagesItemsRatesItems[]|array */
+    public $rates = NULL;
+
     /**
      * @param AvailStatusMessagesItemsStatusApplicationControl $statusApplicationControl
      * @param int $bookingLimit
      * @param AvailStatusMessagesItemsRestrictionStatusItems[]|array $restrictionStatus
      * @param AvailStatusMessagesItemsLengthsOfStayItems[]|array $lengthsOfStay
      * @param AvailStatusMessagesItemsAdvancedBookingOffsetItems[]|array $advancedBookingOffset
+     * @param AvailStatusMessagesItemsRatesItems[]|array $rates
      */
-    public function __construct(AvailStatusMessagesItemsStatusApplicationControl $statusApplicationControl = NULL, $bookingLimit = NULL, $restrictionStatus = NULL, $lengthsOfStay = NULL, $advancedBookingOffset = NULL)
+    public function __construct(AvailStatusMessagesItemsStatusApplicationControl $statusApplicationControl = NULL, $bookingLimit = NULL, $restrictionStatus = NULL, $lengthsOfStay = NULL, $advancedBookingOffset = NULL, $rates = NULL)
     {
         $this->statusApplicationControl = $statusApplicationControl;
         $this->bookingLimit = $bookingLimit;
         $this->restrictionStatus = $restrictionStatus;
         $this->lengthsOfStay = $lengthsOfStay;
         $this->advancedBookingOffset = $advancedBookingOffset;
+        $this->rates = $rates;
     }
 
     /**
@@ -71,6 +76,10 @@ class AvailStatusMessagesItems extends ClassStructure
         $properties->advancedBookingOffset->items = AvailStatusMessagesItemsAdvancedBookingOffsetItems::schema();
         $properties->advancedBookingOffset->title = "The Advancedbookingoffset Schema";
         $ownerSchema->addPropertyMapping('AdvancedBookingOffset', self::names()->advancedBookingOffset);
+        $properties->rates = Schema::arr();
+        $properties->rates->items = AvailStatusMessagesItemsRatesItems::schema();
+        $properties->rates->title = "The Rates Schema";
+        $ownerSchema->addPropertyMapping('Rates', self::names()->rates);
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Items Schema";
         $ownerSchema->required = array(
@@ -301,6 +310,67 @@ class AvailStatusMessagesItems extends ClassStructure
     {
         if(!is_array($this->advancedBookingOffset)) { $this->advancedBookingOffset = []; }
         $this->advancedBookingOffset[$key] = $AvailStatusMessagesItemsAdvancedBookingOffsetItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @return AvailStatusMessagesItemsRatesItems[]|array
+     * @codeCoverageIgnoreStart
+     */
+    public function getRates()
+    {
+        return $this->rates;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param AvailStatusMessagesItemsRatesItems[]|array $rates
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setRates($rates = NULL)
+    {
+        $this->rates = $rates;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param AvailStatusMessagesItemsRatesItems $AvailStatusMessagesItemsRatesItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function addRates(AvailStatusMessagesItemsRatesItems $AvailStatusMessagesItemsRatesItems)
+    {
+        if(!is_array($this->rates)) { $this->rates = []; }
+        $this->rates[] = $AvailStatusMessagesItemsRatesItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @return AvailStatusMessagesItemsRatesItems|null
+     * @codeCoverageIgnoreStart
+     */
+    public function getRatesByKey($key)
+    {
+        if(is_array($this->rates) && key_exists($key, $this->rates) ) { return $this->rates[$key]; }
+        return null;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @param string $key
+     * @param AvailStatusMessagesItemsRatesItems $AvailStatusMessagesItemsRatesItems
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setRatesByKey($key, AvailStatusMessagesItemsRatesItems $AvailStatusMessagesItemsRatesItems)
+    {
+        if(!is_array($this->rates)) { $this->rates = []; }
+        $this->rates[$key] = $AvailStatusMessagesItemsRatesItems;
         return $this;
     }
     /** @codeCoverageIgnoreEnd */
