@@ -69,10 +69,8 @@ class RateAmountMessagesItemsRatesItemsBaseByGuestAmtsItems extends ClassStructu
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Items Schema";
         $ownerSchema->required = array(
-            0 => 'AgeQualifyingCode',
-            1 => 'NumberOfGuests',
-            2 => 'AmountAfterTax',
-            3 => 'CurrencyCode',
+            0 => 'AmountAfterTax',
+            1 => 'CurrencyCode',
         );
     }
 

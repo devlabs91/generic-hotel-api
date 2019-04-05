@@ -107,8 +107,6 @@
                     "type": "object",
                     "title": "The Items Schema",
                     "required": [
-                      "AgeQualifyingCode",
-                      "NumberOfGuests",
                       "AmountAfterTax",
                       "CurrencyCode"
                     ],
