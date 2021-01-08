@@ -207,6 +207,37 @@
                       }
                     }
                   }
+                },
+                "MealsIncluded": {
+                  "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/MealsIncluded",
+                  "type": "object",
+                  "title": "The MealsIncluded Schema",
+                  "required": [
+                    "Breakfast",
+                    "NumberOfBreakfast"
+                  ],
+                  "properties": {
+                    "InvTypeCode": {
+                      "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/MealsIncluded/properties/Breakfast",
+                      "type": "string",
+                      "title": "The Breakfast Schema",
+                      "default": "",
+                      "examples": [
+                        ""
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "RatePlanCode": {
+                      "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/MealsIncluded/properties/NumberOfBreakfast",
+                      "type": "string",
+                      "title": "The NumberOfBreakfast Schema",
+                      "default": "",
+                      "examples": [
+                        ""
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  }
                 }
               }
             }

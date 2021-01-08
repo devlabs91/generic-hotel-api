@@ -22,14 +22,19 @@ class RateAmountMessagesItemsRatesItems extends ClassStructure
     /** @var RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems[]|array */
     public $additionalGuestAmounts = NULL;
 
+    /** @var RateAmountMessagesItemsRatesItemsMealsIncluded */
+    public $mealsIncluded = NULL;
+    
     /**
      * @param RateAmountMessagesItemsRatesItemsBaseByGuestAmtsItems[]|array $baseByGuestAmts
      * @param RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems[]|array $additionalGuestAmounts
+     * @param RateAmountMessagesItemsRatesItemsMealsIncluded $mealsIncluded
      */
-    public function __construct($baseByGuestAmts = NULL, $additionalGuestAmounts = NULL)
+    public function __construct($baseByGuestAmts = NULL, $additionalGuestAmounts = NULL, $mealsIncluded = NULL)
     {
         $this->baseByGuestAmts = $baseByGuestAmts;
         $this->additionalGuestAmounts = $additionalGuestAmounts;
+        $this->mealsIncluded = $mealsIncluded;
     }
 
     /**
@@ -46,11 +51,14 @@ class RateAmountMessagesItemsRatesItems extends ClassStructure
         $properties->additionalGuestAmounts->items = RateAmountMessagesItemsRatesItemsAdditionalGuestAmountsItems::schema();
         $properties->additionalGuestAmounts->title = "The Additionalguestamounts Schema";
         $ownerSchema->addPropertyMapping('AdditionalGuestAmounts', self::names()->additionalGuestAmounts);
+        $properties->mealsIncluded = RateAmountMessagesItemsRatesItemsMealsIncluded::schema();
+        $ownerSchema->addPropertyMapping('MealsIncluded', self::names()->statusApplicationControl);
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Items Schema";
         $ownerSchema->required = array(
             0 => 'BaseByGuestAmts',
             1 => 'AdditionalGuestAmounts',
+            2 => 'MealsIncluded',
         );
     }
 
@@ -176,6 +184,28 @@ class RateAmountMessagesItemsRatesItems extends ClassStructure
     }
     /** @codeCoverageIgnoreEnd */
 
+    /**
+     * @return RateAmountMessagesItemsRatesItemsMealsIncluded
+     * @codeCoverageIgnoreStart
+     */
+    public function getMealsIncluded()
+    {
+        return $this->mealsIncluded;
+    }
+    /** @codeCoverageIgnoreEnd */
+    
+    /**
+     * @param RateAmountMessagesItemsRatesItemsMealsIncluded $mealsIncluded
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setMealsIncluded(RateAmountMessagesItemsRatesItemsMealsIncluded $mealsIncluded = NULL)
+    {
+        $this->mealsIncluded = $mealsIncluded;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+    
     public function &toArray()
     {
         $test = json_decode( json_encode( self::export( $this ) ), true);
