@@ -217,7 +217,7 @@
                     "NumberOfBreakfast"
                   ],
                   "properties": {
-                    "InvTypeCode": {
+                    "Breakfast": {
                       "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/MealsIncluded/properties/Breakfast",
                       "type": "string",
                       "title": "The Breakfast Schema",
@@ -227,7 +227,7 @@
                       ],
                       "pattern": "^(.*)$"
                     },
-                    "RatePlanCode": {
+                    "NumberOfBreakfast": {
                       "$id": "#/properties/RateAmountMessages/items/properties/Rates/items/properties/MealsIncluded/properties/NumberOfBreakfast",
                       "type": "string",
                       "title": "The NumberOfBreakfast Schema",
