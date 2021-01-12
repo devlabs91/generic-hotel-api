@@ -52,7 +52,7 @@ class RateAmountMessagesItemsRatesItems extends ClassStructure
         $properties->additionalGuestAmounts->title = "The Additionalguestamounts Schema";
         $ownerSchema->addPropertyMapping('AdditionalGuestAmounts', self::names()->additionalGuestAmounts);
         $properties->mealsIncluded = RateAmountMessagesItemsRatesItemsMealsIncluded::schema();
-        $ownerSchema->addPropertyMapping('MealsIncluded', self::names()->statusApplicationControl);
+        $ownerSchema->addPropertyMapping('MealsIncluded', self::names()->mealsIncluded);
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Items Schema";
         $ownerSchema->required = array(
