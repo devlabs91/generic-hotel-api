@@ -58,7 +58,6 @@ class RateAmountMessagesItemsRatesItems extends ClassStructure
         $ownerSchema->required = array(
             0 => 'BaseByGuestAmts',
             1 => 'AdditionalGuestAmounts',
-            2 => 'MealsIncluded',
         );
     }
 
