@@ -45,6 +45,50 @@
             }
           ]
         }
+      ],
+      "RestrictionStatus": [
+        {
+          "Restriction": "Master",
+          "Status": "Open"
+        },
+        {
+          "Restriction": "Master",
+          "Status": "Close"
+        },
+        {
+          "Restriction": "Arrival",
+          "Status": "Open"
+        },
+        {
+          "Restriction": "Arrival",
+          "Status": "Close"
+        },
+        {
+          "Restriction": "Departure",
+          "Status": "Open"
+        },
+        {
+          "Restriction": "Departure",
+          "Status": "Close"
+        }
+      ],
+      "LengthsOfStay": [
+        {
+          "MinMaxMessageType": "MinLOS",
+          "Time": 3,
+          "ArrivalDateBased": false
+        },
+        {
+          "MinMaxMessageType": "MaxLOS",
+          "Time": 3,
+          "ArrivalDateBased": false
+        }
+      ],
+      "AdvancedBookingOffset": [
+        {
+          "Type": "MinAdvancedBookingOffset",
+          "Value": 5
+        }
       ]
     }
   ]

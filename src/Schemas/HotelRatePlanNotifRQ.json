@@ -241,6 +241,122 @@
                 }
               }
             }
+          },
+          "RestrictionStatus": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/RestrictionStatus",
+            "type": "array",
+            "title": "The Restrictionstatus Schema",
+            "items": {
+              "$id": "#/properties/AvailStatusMessages/items/properties/RestrictionStatus/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "Restriction",
+                "Status"
+              ],
+              "properties": {
+                "Restriction": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/RestrictionStatus/items/properties/Restriction",
+                  "type": "string",
+                  "title": "The Restriction Schema",
+                  "default": "",
+                  "examples": [
+                    "Master"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Status": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/RestrictionStatus/items/properties/Status",
+                  "type": "string",
+                  "title": "The Status Schema",
+                  "default": "",
+                  "examples": [
+                    "Open"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "LengthsOfStay": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay",
+            "type": "array",
+            "title": "The Lengthsofstay Schema",
+            "items": {
+              "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "MinMaxMessageType",
+                "Time",
+                "ArrivalDateBased"
+              ],
+              "properties": {
+                "MinMaxMessageType": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay/items/properties/MinMaxMessageType",
+                  "type": "string",
+                  "title": "The Minmaxmessagetype Schema",
+                  "default": "",
+                  "examples": [
+                    "MinLOS"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Time": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay/items/properties/Time",
+                  "type": "integer",
+                  "title": "The Time Schema",
+                  "default": 0,
+                  "examples": [
+                    3
+                  ]
+                },
+                "ArrivalDateBased": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/LengthsOfStay/items/properties/ArrivalDateBased",
+                  "type": "boolean",
+                  "title": "The Arrivaldatebased Schema",
+                  "default": false,
+                  "examples": [
+                    false
+                  ]
+                }
+              }
+            }
+          },
+          "AdvancedBookingOffset": {
+            "$id": "#/properties/AvailStatusMessages/items/properties/AdvancedBookingOffset",
+            "type": "array",
+            "title": "The Advancedbookingoffset Schema",
+            "items": {
+              "$id": "#/properties/AvailStatusMessages/items/properties/AdvancedBookingOffset/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "Type",
+                "Value"
+              ],
+              "properties": {
+                "Type": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/AdvancedBookingOffset/items/properties/Type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "MinAdvancedBookingOffset"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "Value": {
+                  "$id": "#/properties/AvailStatusMessages/items/properties/AdvancedBookingOffset/items/properties/Value",
+                  "type": "integer",
+                  "title": "The Value Schema",
+                  "default": 0,
+                  "examples": [
+                    5
+                  ]
+                }
+              }
+            }
           }
         }
       }
