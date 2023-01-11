@@ -89,6 +89,12 @@
           "Type": "MinAdvancedBookingOffset",
           "Value": 5
         }
+      ],
+      "Extension": [
+        {
+          "Type": "Guarantee",
+          "Value": "5"
+        }
       ]
     }
   ]
