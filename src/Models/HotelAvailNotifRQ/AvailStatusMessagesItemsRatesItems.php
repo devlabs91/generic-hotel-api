@@ -22,14 +22,19 @@ class AvailStatusMessagesItemsRatesItems extends ClassStructure
     /** @var AvailStatusMessagesItemsRatesItemsAdditionalGuestAmountsItems[]|array */
     public $additionalGuestAmounts = NULL;
 
+    /** @var AvailStatusMessagesItemsRatesItemsMealsIncluded */
+    public $mealsIncluded = NULL;
+
     /**
      * @param AvailStatusMessagesItemsRatesItemsBaseByGuestAmtsItems[]|array $baseByGuestAmts
      * @param AvailStatusMessagesItemsRatesItemsAdditionalGuestAmountsItems[]|array $additionalGuestAmounts
+     * @param AvailStatusMessagesItemsRatesItemsMealsIncluded $mealsIncluded
      */
-    public function __construct($baseByGuestAmts = NULL, $additionalGuestAmounts = NULL)
+    public function __construct($baseByGuestAmts = NULL, $additionalGuestAmounts = NULL, $mealsIncluded = NULL)
     {
         $this->baseByGuestAmts = $baseByGuestAmts;
         $this->additionalGuestAmounts = $additionalGuestAmounts;
+        $this->mealsIncluded = $mealsIncluded;
     }
 
     /**
@@ -46,6 +51,8 @@ class AvailStatusMessagesItemsRatesItems extends ClassStructure
         $properties->additionalGuestAmounts->items = AvailStatusMessagesItemsRatesItemsAdditionalGuestAmountsItems::schema();
         $properties->additionalGuestAmounts->title = "The Additionalguestamounts Schema";
         $ownerSchema->addPropertyMapping('AdditionalGuestAmounts', self::names()->additionalGuestAmounts);
+        $properties->mealsIncluded = AvailStatusMessagesItemsRatesItemsMealsIncluded::schema();
+        $ownerSchema->addPropertyMapping('MealsIncluded', self::names()->mealsIncluded);
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Items Schema";
         $ownerSchema->required = array(
@@ -172,6 +179,28 @@ class AvailStatusMessagesItemsRatesItems extends ClassStructure
     {
         if(!is_array($this->additionalGuestAmounts)) { $this->additionalGuestAmounts = []; }
         $this->additionalGuestAmounts[$key] = $AvailStatusMessagesItemsRatesItemsAdditionalGuestAmountsItems;
+        return $this;
+    }
+    /** @codeCoverageIgnoreEnd */
+
+    /**
+     * @return AvailStatusMessagesItemsRatesItemsMealsIncluded
+     * @codeCoverageIgnoreStart
+     */
+    public function getMealsIncluded()
+    {
+        return $this->mealsIncluded;
+    }
+    /** @codeCoverageIgnoreEnd */
+    
+    /**
+     * @param AvailStatusMessagesItemsRatesItemsMealsIncluded $mealsIncluded
+     * @return $this
+     * @codeCoverageIgnoreStart
+     */
+    public function setMealsIncluded(AvailStatusMessagesItemsRatesItemsMealsIncluded $mealsIncluded = NULL)
+    {
+        $this->mealsIncluded = $mealsIncluded;
         return $this;
     }
     /** @codeCoverageIgnoreEnd */
