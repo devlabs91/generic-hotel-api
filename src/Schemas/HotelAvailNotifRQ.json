@@ -335,37 +335,32 @@
                 },
                 "MealsIncluded": {
                   "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/MealsIncluded",
-                  "type": "array",
+                  "type": "object",
                   "title": "The MealsIncluded Schema",
-                  "items": {
-                    "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/MealsIncluded/items",
-                    "type": "object",
-                    "title": "The Items Schema",
-                    "required": [
-                      "Breakfast",
-                      "NumberOfBreakfast"
-                    ],
-                    "properties": {
-                      "Breakfast": {
-                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/MealsIncluded/items/properties/Breakfast",
-                        "type": "string",
-                        "title": "The Breakfast Schema",
-                        "default": "",
-                        "examples": [
-                          ""
-                        ],
-                        "pattern": "^(.*)$"
-                      },
-                      "NumberOfBreakfast": {
-                        "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/MealsIncluded/items/properties/NumberOfBreakfast",
-                        "type": "string",
-                        "title": "The NumberOfBreakfast Schema",
-                        "default": "",
-                        "examples": [
-                          ""
-                        ],
-                        "pattern": "^(.*)$"
-                      }
+                  "required": [
+                    "Breakfast",
+                    "NumberOfBreakfast"
+                  ],
+                  "properties": {
+                    "Breakfast": {
+                      "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/MealsIncluded/properties/Breakfast",
+                      "type": "string",
+                      "title": "The Breakfast Schema",
+                      "default": "",
+                      "examples": [
+                        ""
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "NumberOfBreakfast": {
+                      "$id": "#/properties/AvailStatusMessages/items/properties/Rates/items/properties/MealsIncluded/properties/NumberOfBreakfast",
+                      "type": "string",
+                      "title": "The NumberOfBreakfast Schema",
+                      "default": "",
+                      "examples": [
+                        ""
+                      ],
+                      "pattern": "^(.*)$"
                     }
                   }
                 }

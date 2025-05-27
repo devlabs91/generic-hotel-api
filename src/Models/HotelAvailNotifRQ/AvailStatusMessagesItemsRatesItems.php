@@ -22,13 +22,13 @@ class AvailStatusMessagesItemsRatesItems extends ClassStructure
     /** @var AvailStatusMessagesItemsRatesItemsAdditionalGuestAmountsItems[]|array */
     public $additionalGuestAmounts = NULL;
 
-    /** @var AvailStatusMessagesItemsRatesItemsMealsIncludedItems[]|array */
+    /** @var AvailStatusMessagesItemsRatesItemsMealsIncluded */
     public $mealsIncluded = NULL;
 
     /**
      * @param AvailStatusMessagesItemsRatesItemsBaseByGuestAmtsItems[]|array $baseByGuestAmts
      * @param AvailStatusMessagesItemsRatesItemsAdditionalGuestAmountsItems[]|array $additionalGuestAmounts
-     * @param AvailStatusMessagesItemsRatesItemsMealsIncludedItems[]|array $mealsIncluded
+     * @param AvailStatusMessagesItemsRatesItemsMealsIncluded $mealsIncluded
      */
     public function __construct($baseByGuestAmts = NULL, $additionalGuestAmounts = NULL, $mealsIncluded = NULL)
     {
@@ -51,9 +51,7 @@ class AvailStatusMessagesItemsRatesItems extends ClassStructure
         $properties->additionalGuestAmounts->items = AvailStatusMessagesItemsRatesItemsAdditionalGuestAmountsItems::schema();
         $properties->additionalGuestAmounts->title = "The Additionalguestamounts Schema";
         $ownerSchema->addPropertyMapping('AdditionalGuestAmounts', self::names()->additionalGuestAmounts);
-        $properties->mealsIncluded = Schema::arr();
-        $properties->mealsIncluded->items = AvailStatusMessagesItemsRatesItemsMealsIncludedItems::schema();
-        $properties->mealsIncluded->title = "The Additionalguestamounts Schema";
+        $properties->mealsIncluded = AvailStatusMessagesItemsRatesItemsMealsIncluded::schema();
         $ownerSchema->addPropertyMapping('MealsIncluded', self::names()->mealsIncluded);
         $ownerSchema->type = 'object';
         $ownerSchema->title = "The Items Schema";
@@ -186,7 +184,7 @@ class AvailStatusMessagesItemsRatesItems extends ClassStructure
     /** @codeCoverageIgnoreEnd */
 
     /**
-     * @return AvailStatusMessagesItemsRatesItemsMealsIncludedItems[]|array
+     * @return AvailStatusMessagesItemsRatesItemsMealsIncluded
      * @codeCoverageIgnoreStart
      */
     public function getMealsIncluded()
@@ -194,54 +192,15 @@ class AvailStatusMessagesItemsRatesItems extends ClassStructure
         return $this->mealsIncluded;
     }
     /** @codeCoverageIgnoreEnd */
-
+    
     /**
-     * @param AvailStatusMessagesItemsRatesItemsMealsIncludedItems[]|array $mealsIncluded
+     * @param AvailStatusMessagesItemsRatesItemsMealsIncluded $mealsIncluded
      * @return $this
      * @codeCoverageIgnoreStart
      */
-    public function setMealsIncluded($mealsIncluded = NULL)
+    public function setMealsIncluded(AvailStatusMessagesItemsRatesItemsMealsIncluded $mealsIncluded = NULL)
     {
         $this->mealsIncluded = $mealsIncluded;
-        return $this;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param AvailStatusMessagesItemsRatesItemsMealsIncludedItems $AvailStatusMessagesItemsRatesItemsMealsIncludedItems
-     * @return $this
-     * @codeCoverageIgnoreStart
-     */
-    public function addMealsIncluded(AvailStatusMessagesItemsRatesItemsMealsIncludedItems $AvailStatusMessagesItemsRatesItemsMealsIncludedItems)
-    {
-        if(!is_array($this->mealsIncluded)) { $this->mealsIncluded = []; }
-        $this->mealsIncluded[] = $AvailStatusMessagesItemsRatesItemsMealsIncludedItems;
-        return $this;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param string $key
-     * @return AvailStatusMessagesItemsRatesItemsMealsIncludedItems|null
-     * @codeCoverageIgnoreStart
-     */
-    public function getMealsIncludedByKey($key)
-    {
-        if(is_array($this->mealsIncluded) && key_exists($key, $this->mealsIncluded) ) { return $this->mealsIncluded[$key]; }
-        return null;
-    }
-    /** @codeCoverageIgnoreEnd */
-
-    /**
-     * @param string $key
-     * @param AvailStatusMessagesItemsRatesItemsMealsIncludedItems $AvailStatusMessagesItemsRatesItemsMealsIncludedItems
-     * @return $this
-     * @codeCoverageIgnoreStart
-     */
-    public function setMealsIncludedByKey($key, AvailStatusMessagesItemsRatesItemsMealsIncludedItems $AvailStatusMessagesItemsRatesItemsMealsIncludedItems)
-    {
-        if(!is_array($this->mealsIncluded)) { $this->mealsIncluded = []; }
-        $this->mealsIncluded[$key] = $AvailStatusMessagesItemsRatesItemsMealsIncludedItems;
         return $this;
     }
     /** @codeCoverageIgnoreEnd */

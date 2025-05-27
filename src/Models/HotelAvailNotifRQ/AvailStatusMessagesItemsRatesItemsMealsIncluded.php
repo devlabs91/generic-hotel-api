@@ -14,7 +14,7 @@ use Swaggest\JsonSchema\Structure\ClassStructure;
 /**
  * The Statusapplicationcontrol Schema
  */
-class AvailStatusMessagesItemsRatesItemsMealsIncludedItems extends ClassStructure
+class AvailStatusMessagesItemsRatesItemsMealsIncluded extends ClassStructure
 {
     /** @var string */
     public $breakfast = NULL;
